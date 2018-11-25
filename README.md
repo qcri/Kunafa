@@ -48,12 +48,12 @@ PMU is not architectural, so the available counters and their usage can be diffe
 This script currently has no support for latest skylake processor, which has a significant change in PMU mechanism.
 
 ## Linux perf tool
-```perf``` is a Linux command line tool for performance monitoring. We use perf to read interesting PMU counters during the runtime.
+```perf``` is a Linux command line tool for performance monitoring. We use perf to read interesting PMU counters. The overhead of reading PMU is very low, especially when we read in a low frequency (every 30 seconds).
 
 Some PMU counters, e.g., memory controller counters, are system-wide (or node-wide), so you may need the ```sudo``` privilege to execute the command. Otherwise, an error would occur. 
 
 # Who uses it
-This tool has been deployed on a cluster in Texas A&M, Qatar.
+This tool has been deployed on a cluster in TAMU-Q.
 We are happy to have more users (and their complaints).
 
 # How to contribute
