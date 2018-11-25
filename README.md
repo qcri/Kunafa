@@ -2,7 +2,7 @@
 A python script using perf and PMU to monitor memory bandwidth, cache, and other performance metrics.
 
 # Why use it?
-Currently, cluster monitoring or job tracing focus on few metrics like CPU utilization and memory capacity usage, which are useful and not sufficient for in-depth analysis. 
+Currently, cluster monitoring or job tracing focus on few metrics like CPU utilization and memory capacity usage, which are useful but not sufficient for in-depth analysis. 
 We build this tool for cluster administrators to collect more useful information at near-zero overhead.
 
 The tool reads the Performance Monitoring Unit (PMU) periodically, and calculates several node-wide performance metrics for each computing node:
