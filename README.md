@@ -1,7 +1,7 @@
-# ClusterMonitor
+# What it is
 A python script using perf and PMU to monitor memory bandwidth, cache, and other performance metrics.
 
-# Why use it?
+# Why use it
 Currently, cluster monitoring or job tracing focus on few metrics like CPU utilization and memory capacity usage, which are useful but not sufficient for in-depth analysis. 
 We build this tool for cluster administrators to collect more useful information at near-zero overhead.
 
@@ -52,7 +52,7 @@ This script currently has no support for latest skylake processor, which has a s
 
 Some PMU counters, e.g., memory controller counters, are system-wide (or node-wide), so you may need the ```sudo``` privilege to execute the command. Otherwise, an error would occur. 
 
-# Who uses it
+# Who use it
 This tool has been deployed on a cluster in TAMU-Q.
 We are happy to have more users (and their complaints).
 
