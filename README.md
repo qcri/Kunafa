@@ -59,10 +59,13 @@ We are happy to have more users (and their complaints).
 # How to contribute
 This tool is originally developed by Xiongchao Tang and Nosayba El-Sayed from Qatar Computing Research Institute. 
 There are a lot of improvements can be made. 
+
 1. To use this tool on older or newer machines. It means he may need to modify the ```perf``` events according to the processor models.
 2. To integrate this tool into existing cluster monitoring frameworks.
 3. To simplify the deployment process. 
 4. And anything can help
 
 To contribute, you can folk your repository, or submit a pull request, or just post an issue. 
+Please also read develop.md for information for development.
+
 
