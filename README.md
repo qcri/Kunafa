@@ -41,7 +41,7 @@ For cluster monitoring, simply run this script on each computing node.
 
 ## How it works
 ### PMU 
-Performance Monitoring Units are hardware units on modern processors that help users to collect performance related data. For Intel Xeon E5/E7 processors, you may like to check https://www.intel.com/content/www/us/en/processors/xeon/xeon-e5-e7-v4-uncore-performance-monitoring.html
+Performance Monitoring Units are hardware units on modern processors that help users to collect performance related data. For Intel Xeon E5/E7 processors, you may like to check [the manual](https://www.intel.com/content/www/us/en/processors/xeon/xeon-e5-e7-v4-uncore-performance-monitoring.html)
 
 PMU is not architectural, so the available counters and their usage can be different for each CPU model. 
 
