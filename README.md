@@ -1,7 +1,7 @@
-# What it is
-A python script using perf and PMU to monitor memory bandwidth, cache, and other performance metrics.
+# Kunafa
+A python script that uses PMU to monitor memory bandwidth, cache, and other performance metrics of a cluster.
 
-# Why use it
+## Why use it
 Currently, cluster monitoring or job tracing focus on few metrics like CPU utilization and memory capacity usage, which are useful but not sufficient for in-depth analysis. 
 We build this tool for cluster administrators to collect more useful information at near-zero overhead.
 
@@ -21,7 +21,7 @@ The tool reads the Performance Monitoring Unit (PMU) periodically, and calculate
 
 From the memory bandwidth data, we have successfully identified the performance bottleneck of several scientific computing programs, and improve the scheduling strategy accordingly. 
 
-# How to use
+## How to use
 First, you need to open the file and change the ```cps``` variable to the exact number of cores per socket according to your system configuration.
 
 Then, type ```sudo ./monitor.py -v``` to start, you may see output like this on the screen
@@ -39,24 +39,24 @@ For more information, try ```-h```.
 
 For cluster monitoring, simply run this script on each computing node. 
 
-# How it works
-## PMU 
+## How it works
+### PMU 
 Performance Monitoring Units are hardware units on modern processors that help users to collect performance related data. For Intel Xeon E5/E7 processors, you may like to check https://www.intel.com/content/www/us/en/processors/xeon/xeon-e5-e7-v4-uncore-performance-monitoring.html
 
 PMU is not architectural, so the available counters and their usage can be different for each CPU model. 
 
 This script currently has no support for latest skylake processor, which has a significant change in PMU mechanism.
 
-## Linux perf tool
+### Linux perf tool
 ```perf``` is a Linux command line tool for performance monitoring. We use perf to read interesting PMU counters. The overhead of reading PMU is very low, especially when we read in a low frequency (every 30 seconds).
 
 Some PMU counters, e.g., memory controller counters, are system-wide (or node-wide), so you may need the ```sudo``` privilege to execute the command. Otherwise, an error would occur. 
 
-# Who use it
+## Who use it
 This tool has been deployed on a cluster in TAMU-Q.
 We are happy to have more users (and their complaints).
 
-# How to contribute
+## How to contribute
 This tool is originally developed by Xiongchao Tang and Nosayba El-Sayed from Qatar Computing Research Institute. 
 There are a lot of improvements can be made. 
 
