@@ -54,12 +54,12 @@ The above command tells where the PMU counters are.
 
 ```bash
 txc@bic05:~ $ ls /sys/bus/event_source/devices/uncore_cbox_0/format/
-edge  event  filter_c6  filter_isoc  filter_link  filter_nc  filter_nid  filter_opc  filter_state  filter_tid  thresh  tid_en  umask``
+edge  event  filter_c6  filter_isoc  filter_link  filter_nc  filter_nid  filter_opc  filter_state  filter_tid  thresh  tid_en  umask
+```
 This command tells the *fields* to specify.
 
 For example, the event string for **memory read request count** is ``uncore_ha_0/event=0x01,umask=0x03/``,
-and the event string for something about PCIe is ``uncore_cbox_0/event=0x35,umask=0x01,filter_tid=0x3F,filter_opc=0x1C8/
-```
+and the event string for something about PCIe is ``uncore_cbox_0/event=0x35,umask=0x01,filter_tid=0x3F,filter_opc=0x1C8/``
 
 ## Monitoring infiniband traffic
 
