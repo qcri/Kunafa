@@ -42,20 +42,24 @@ An event is not listed doesn't mean it is unsupported by perf.
 
 To check what PMU components your platform has, try the following two commands
 
-``txc@bic05:~ $ ls /sys/devices
+```bash
+txc@bic05:~ $ ls /sys/devices
 breakpoint   intel_cqm    pci0000:7f  software       uncore_cbox_10  uncore_cbox_3  uncore_cbox_8  uncore_imc_1  uncore_qpi_1    uncore_sbox_1
 cpu          intel_pt     pci0000:80  system         uncore_cbox_11  uncore_cbox_4  uncore_cbox_9  uncore_imc_4  uncore_r2pcie   uncore_sbox_2
 cstate_core  LNXSYSTM:00  pci0000:ff  tracepoint     uncore_cbox_12  uncore_cbox_5  uncore_ha_0    uncore_imc_5  uncore_r3qpi_0  uncore_sbox_3
 cstate_pkg   msr          platform    uncore_cbox_0  uncore_cbox_13  uncore_cbox_6  uncore_ha_1    uncore_pcu    uncore_r3qpi_1  uncore_ubox
-intel_bts    pci0000:00   pnp0        uncore_cbox_1  uncore_cbox_2   uncore_cbox_7  uncore_imc_0   uncore_qpi_0  uncore_sbox_0   virtual``
+intel_bts    pci0000:00   pnp0        uncore_cbox_1  uncore_cbox_2   uncore_cbox_7  uncore_imc_0   uncore_qpi_0  uncore_sbox_0   virtual
+```
 The above command tells where the PMU counters are.
 
-``txc@bic05:~ $ ls /sys/bus/event_source/devices/uncore_cbox_0/format/
+```bash
+txc@bic05:~ $ ls /sys/bus/event_source/devices/uncore_cbox_0/format/
 edge  event  filter_c6  filter_isoc  filter_link  filter_nc  filter_nid  filter_opc  filter_state  filter_tid  thresh  tid_en  umask``
 This command tells the *fields* to specify.
 
 For example, the event string for **memory read request count** is ``uncore_ha_0/event=0x01,umask=0x03/``,
-and the event string for something about PCIe is ``uncore_cbox_0/event=0x35,umask=0x01,filter_tid=0x3F,filter_opc=0x1C8/``
+and the event string for something about PCIe is ``uncore_cbox_0/event=0x35,umask=0x01,filter_tid=0x3F,filter_opc=0x1C8/
+```
 
 ## Monitoring infiniband traffic
 
